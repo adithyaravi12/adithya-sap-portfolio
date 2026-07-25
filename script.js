@@ -13,14 +13,14 @@ const projects = [
     summary:
       "Coordinated the move from GTS 2020 to 2023 across technical teams and business stakeholders, owning test readiness, transport tracking, CAB documentation, and hypercare.",
     impact: "Clear path from SIT to production",
-    tags: ["GTS", "SIT & UAT", "CAB", "Cross-functional delivery"],
+    tags: ["GTS", "SIT & UAT", "CAB", "Cross functional delivery"],
   },
   {
     number: "02",
     type: "Pricing & billing",
     title: "Smarter invoice workflows",
     summary:
-      "Shaped pricing and output improvements for complex order-to-cash scenarios, including a customer-specific workflow that turns invoices with 100+ item lines into a concise business-ready format.",
+      "Shaped pricing and output improvements for complex order to cash scenarios, including a customer-specific workflow that turns invoices with 100+ item lines into a concise business-ready format.",
     impact: "Less manual review at scale",
     tags: ["SAP SD", "Pricing", "Billing", "Output"],
   },
@@ -29,7 +29,7 @@ const projects = [
     type: "New business model",
     title: "Third-party revenue flow",
     summary:
-      "Translated a multi-party product, installation, and subscription model into an end-to-end SAP design spanning sales orders, procurement, fulfillment, and customer billing.",
+      "Translated a multiparty product, installation, and subscription model into an end-to-end SAP design spanning sales orders, procurement, fulfillment, and customer billing.",
     impact: "One process across O2C and P2P",
     tags: ["O2C", "P2P", "Functional design", "Integration"],
   },
@@ -47,8 +47,8 @@ const projects = [
     type: "Production support & enhancement delivery",
     title: "From root cause to reliable release",
     summary:
-      "Troubleshoot day-to-day production failures, identify root causes, and provide practical resolutions. For custom-report enhancements, document functional specifications, collaborate with ABAP developers, execute testing, complete CAB governance, and support the release through production.",
-    impact: "End-to-end ownership from incident to deployment",
+      "Troubleshoot day to day production failures, identify root causes, and provide practical resolutions. For custom-report enhancements, document functional specifications, collaborate with ABAP developers, execute testing, complete CAB governance, and support the release through production.",
+    impact: "End to end ownership from incident to deployment",
     tags: ["Root-cause analysis", "Functional specs", "ABAP collaboration", "CAB"],
   },
 ];
@@ -105,17 +105,39 @@ const certifications = [
 ];
 
 /*
-  Add approved feedback directly here if you do not use Google Sheets.
-
-  Example:
-  {
-    quote: "Adithya brings clarity to complex cross-functional problems.",
-    name: "Colleague name",
-    role: "Role · Company",
-    relationship: "Worked together on SAP delivery"
-  }
+  Preview examples only. Replace these with feedback reviewed and approved
+  by the named colleagues before presenting them as published endorsements.
 */
-const testimonials = [];
+const testimonials = [
+  {
+    quote:
+      "Lorem ipsum dolor sit amet. Ea enim esse aut similique odio ut corporis doloremque. Ut unde optio et ipsa tempore et error porro eum iure dolor ex eveniet porro id officia sint et voluptatem internos. ",
+    name: "Manager name · Example",
+    role: "Manager · Company",
+    relationship: "Managed Adithya during SAP production support",
+  },
+  {
+    quote:
+      "Lorem ipsum dolor sit amet. Ea enim esse aut similique odio ut corporis doloremque. Ut unde optio et ipsa tempore et error porro eum iure dolor ex eveniet porro id officia sint et voluptatem internos. ",
+    name: "Business colleague name · Example",
+    role: "Business Process Owner · Company",
+    relationship: "Collaborated on SAP pricing and order-to-cash enhancements",
+  },
+  {
+    quote:
+      "Lorem ipsum dolor sit amet. Ea enim esse aut similique odio ut corporis doloremque. Ut unde optio et ipsa tempore et error porro eum iure dolor ex eveniet porro id officia sint et voluptatem internos. ",
+    name: "Technical colleague name · Example",
+    role: "SAP ABAP Developer · Company",
+    relationship: "Collaborated on custom reports and SAP enhancements",
+  },
+  {
+    quote:
+      "Lorem ipsum dolor sit amet. Ea enim esse aut similique odio ut corporis doloremque. Ut unde optio et ipsa tempore et error porro eum iure dolor ex eveniet porro id officia sint et voluptatem internos. ",
+    name: "Project colleague name · Example",
+    role: "Project Manager · Company",
+    relationship: "Collaborated on an SAP platform upgrade",
+  },
+];
 
 /*
   OPTIONAL GOOGLE SHEETS INTEGRATION
@@ -146,6 +168,7 @@ const projectList = document.querySelector("#project-list");
 const expertiseGrid = document.querySelector("#expertise-grid");
 const certificationGrid = document.querySelector("#certification-grid");
 const feedbackContent = document.querySelector("#feedback-content");
+const allFeedbackGrid = document.querySelector("#all-feedback-grid");
 
 function escapeHTML(value = "") {
   return String(value)
@@ -157,6 +180,8 @@ function escapeHTML(value = "") {
 }
 
 function renderProjects() {
+  if (!projectList) return;
+  
   projectList.innerHTML = projects
     .map(
       (project) => `
@@ -183,6 +208,8 @@ function renderProjects() {
 }
 
 function renderExpertise() {
+  if (!expertiseGrid) return;
+  
   expertiseGrid.innerHTML = expertise
     .map(
       (group, index) => `
@@ -204,6 +231,8 @@ function renderExpertise() {
 }
 
 function renderCertifications() {
+  if (!certificationGrid) return;
+  
   certificationGrid.innerHTML = certifications
     .map(
       (certification) => `
@@ -245,12 +274,14 @@ function renderCertifications() {
 }
 
 function renderTestimonials(items, note = "") {
-  if (!items.length) return;
+  if (!feedbackContent || !items.length) return;
+
+  const featuredItems = items.slice(0, 2);
 
   feedbackContent.innerHTML = `
     <div>
       <div class="testimonial-grid">
-        ${items
+        ${featuredItems
           .map(
             (item) => `
               <figure class="testimonial-card">
@@ -265,9 +296,49 @@ function renderTestimonials(items, note = "") {
           )
           .join("")}
       </div>
+      ${
+        items.length > 2
+          ? `
+            <div class="feedback-actions">
+              <a
+                class="view-feedback"
+                href="./feedback.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View all feedback <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          `
+          : ""
+      }
       ${note ? `<p class="feedback-note">${escapeHTML(note)}</p>` : ""}
     </div>
   `;
+}
+
+function renderAllTestimonials(items) {
+  if (!allFeedbackGrid) return;
+
+  allFeedbackGrid.innerHTML = items
+    .map(
+      (item) => `
+        <figure class="testimonial-card">
+          <blockquote>“${escapeHTML(item.quote)}”</blockquote>
+          <figcaption>
+            <strong>${escapeHTML(item.name)}</strong>
+            <span>${escapeHTML(item.role)}</span>
+            <small>${escapeHTML(item.relationship)}</small>
+          </figcaption>
+        </figure>
+      `,
+    )
+    .join("");
+}
+
+function displayTestimonials(items, note = "") {
+  renderTestimonials(items, note);
+  renderAllTestimonials(items);
 }
 
 async function loadTestimonials() {
