@@ -360,7 +360,7 @@ async function loadTestimonials() {
         item.name,
     );
 
-    renderTestimonials(
+    displayTestimonials(
       approvedFeedback.length ? approvedFeedback : testimonials,
     );
   } catch (error) {
