@@ -1,11 +1,11 @@
 :root {
-  --ink: #102827;
-  --muted: #5f716f;
-  --paper: #f4f3ee;
-  --card: #fffef9;
-  --line: #d8ddd8;
-  --blue: #2456e6;
-  --mint: #97ebcf;
+  --ink: #2a1014;
+  --muted: #765f63;
+  --paper: #f7f1ef;
+  --card: #fffbfa;
+  --line: #e5d5d6;
+  --blue: #b3263e;
+  --mint: #f2a6b3;
   --sans: Inter, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
@@ -22,7 +22,7 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 84% 9%, rgb(151 235 207 / 32%), transparent 22rem),
+    radial-gradient(circle at 84% 9%, rgb(242 166 179 / 28%), transparent 22rem),
     var(--paper);
   color: var(--ink);
   font-family: var(--sans);
@@ -138,7 +138,7 @@ nav a:focus-visible,
 }
 
 .eyebrow span {
-  color: #94a09f;
+  color: #a88f93;
 }
 
 h1 {
@@ -224,7 +224,7 @@ h1 {
 }
 
 .system-card::before {
-  background-image: radial-gradient(#bcc7c4 0.7px, transparent 0.7px);
+  background-image: radial-gradient(#d3b8bc 0.7px, transparent 0.7px);
   background-size: 8px 8px;
   content: "";
   height: 4.5rem;
@@ -297,7 +297,7 @@ h1 {
 }
 
 .system-flow b {
-  color: #a6b1af;
+  color: #b9a1a5;
   font-size: 0.8rem;
   font-weight: 400;
 }
@@ -500,7 +500,7 @@ h2 {
 
 .project-main > p,
 .project-result small {
-  color: #91a4a1;
+  color: #b99ea3;
   font-family: var(--mono);
   font-size: 0.65rem;
   letter-spacing: 0.1em;
@@ -516,7 +516,7 @@ h2 {
 }
 
 .project-main > span {
-  color: #b8c6c3;
+  color: #d6c0c4;
   display: block;
   font-size: 0.9rem;
   line-height: 1.7;
@@ -541,7 +541,7 @@ h2 {
 .tag-list span {
   border: 1px solid rgb(255 255 255 / 22%);
   border-radius: 999px;
-  color: #c4d1ce;
+  color: #decbd0;
   font-size: 0.64rem;
   padding: 0.42rem 0.68rem;
 }
@@ -674,7 +674,7 @@ h2 {
 
 .certification-card {
   background:
-    linear-gradient(135deg, rgb(151 235 207 / 16%), transparent 62%),
+    linear-gradient(135deg, rgb(242 166 179 / 16%), transparent 62%),
     var(--card);
   border: 1px solid var(--line);
   padding: clamp(1.75rem, 3.5vw, 3rem);
@@ -797,7 +797,7 @@ h2 {
 .feedback-empty {
   align-items: center;
   background:
-    linear-gradient(135deg, rgb(151 235 207 / 18%), transparent 62%),
+    linear-gradient(135deg, rgb(242 166 179 / 18%), transparent 62%),
     var(--card);
   border: 1px solid var(--line);
   display: grid;
@@ -866,6 +866,90 @@ h2 {
   margin-top: 0.35rem;
 }
 
+.feedback-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+
+.view-feedback {
+  align-items: center;
+  background: var(--ink);
+  border-radius: 999px;
+  color: white;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  gap: 1.25rem;
+  padding: 0.9rem 1.15rem;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.view-feedback:hover,
+.view-feedback:focus-visible {
+  background: var(--blue);
+  transform: translateY(-2px);
+}
+
+.all-feedback-page {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 4.5vw 2rem;
+}
+
+.feedback-page-header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.all-feedback-hero {
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: clamp(2rem, 7vw, 7rem);
+  grid-template-columns: 1.2fr 0.8fr;
+  padding: clamp(5rem, 9vw, 9rem) 0 clamp(3.5rem, 6vw, 6rem);
+}
+
+.all-feedback-hero .eyebrow {
+  margin-bottom: 1.35rem;
+}
+
+.all-feedback-hero h1 {
+  font-size: clamp(3.7rem, 7vw, 7rem);
+  max-width: 850px;
+}
+
+.all-feedback-hero > p {
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 0;
+  max-width: 520px;
+}
+
+.all-feedback-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: clamp(3rem, 6vw, 6rem) 0;
+}
+
+.all-feedback-grid .testimonial-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+}
+
+.all-feedback-grid .testimonial-card blockquote {
+  flex: 1;
+}
+
+.feedback-page-footer {
+  margin-top: 0;
+}
+
 .feedback-note {
   color: var(--muted);
   font-size: 0.7rem;
@@ -874,7 +958,7 @@ h2 {
 
 .career-panel {
   background:
-    linear-gradient(125deg, rgb(151 235 207 / 18%), transparent 46%),
+    linear-gradient(125deg, rgb(242 166 179 / 18%), transparent 46%),
     var(--card);
   border: 1px solid var(--line);
   display: grid;
@@ -887,7 +971,7 @@ h2 {
 }
 
 .career-panel::after {
-  border: 1px solid rgb(36 86 230 / 25%);
+  border: 1px solid rgb(179 38 62 / 25%);
   border-radius: 50%;
   content: "";
   height: 19rem;
@@ -957,7 +1041,7 @@ h2 {
 }
 
 .availability span:last-child {
-  color: #b7c6c3;
+  color: #d2bec2;
   font-family: var(--mono);
 }
 
@@ -1041,6 +1125,15 @@ footer > a {
 
   .expertise-intro .eyebrow {
     margin: 0;
+  }
+
+ .all-feedback-hero {
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  .all-feedback-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1131,6 +1224,14 @@ footer > a {
   .career-panel {
     margin-left: -2vw;
     margin-right: -2vw;
+  }
+
+  .all-feedback-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .all-feedback-grid .testimonial-card {
+    min-height: 0;
   }
 
   .availability {
