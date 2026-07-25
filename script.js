@@ -343,7 +343,7 @@ function displayTestimonials(items, note = "") {
 
 async function loadTestimonials() {
   if (!GOOGLE_SHEETS_FEED_URL) {
-    renderTestimonials(testimonials);
+    displayTestimonials(testimonials);
     return;
   }
 
@@ -365,7 +365,7 @@ async function loadTestimonials() {
     );
   } catch (error) {
     console.warn("Could not load Google Sheets feedback:", error);
-    renderTestimonials(
+    displayTestimonials(
       testimonials,
       testimonials.length
         ? "Showing saved feedback because the live feed is unavailable."
