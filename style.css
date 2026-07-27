@@ -374,7 +374,7 @@ h1 {
 }
 
 .about-content {
-  align-items: start;
+  align-items: center;
   display: grid;
   gap: clamp(2.5rem, 5vw, 5rem);
   grid-template-columns: 0.9fr 1.1fr;
