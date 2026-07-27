@@ -92,7 +92,7 @@ const expertise = [
   by SAP, Credly, or another certification provider.
 */
 const certifications = [
-  {
+  /* {
     title: "SAP Certified Associate — SAP S/4HANA Sales",
     provider: "SAP",
     issued: "Placeholder issue date",
@@ -100,8 +100,8 @@ const certifications = [
     description:
       "Placeholder certification entry demonstrating SAP S/4HANA Sales and order-to-cash knowledge.",
     verificationUrl: "https://www.sap.com/",
-    skills: ["SAP S/4HANA", "Sales", "Order-to-Cash"],
-  },
+    skills: ["SAP S/4HANA", "Sales", "Order-to-Cash"], 
+  }, */
 ];
 
 /*
@@ -166,7 +166,7 @@ const GOOGLE_SHEETS_FEED_URL = "";
 
 const projectList = document.querySelector("#project-list");
 const expertiseGrid = document.querySelector("#expertise-grid");
-const certificationGrid = document.querySelector("#certification-grid");
+/* const certificationGrid = document.querySelector("#certification-grid"); */
 const feedbackContent = document.querySelector("#feedback-content");
 const allFeedbackGrid = document.querySelector("#all-feedback-grid");
 
@@ -230,7 +230,7 @@ function renderExpertise() {
     .join("");
 }
 
-function renderCertifications() {
+/* function renderCertifications() {
   if (!certificationGrid) return;
   
   certificationGrid.innerHTML = certifications
@@ -271,7 +271,7 @@ function renderCertifications() {
       `,
     )
     .join("");
-}
+} */
 
 function renderTestimonials(items, note = "") {
   if (!feedbackContent || !items.length) return;
@@ -399,6 +399,6 @@ function enableRevealAnimations() {
 
 renderProjects();
 renderExpertise();
-renderCertifications();
+/* renderCertifications(); */
 loadTestimonials();
 enableRevealAnimations();
