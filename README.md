@@ -99,7 +99,7 @@ Edit the CSS variables and component rules in `style.css`. The site uses respons
 ## Deploy with GitHub Pages
 
 1. Open the repository on GitHub.
-2. Go to **Settings â†’ Pages**.
+2. Go to **Settings -> Pages**.
 3. Under **Build and deployment**, select **Deploy from a branch**.
 4. Choose the `main` branch and the `/ (root)` folder.
 5. Save and wait for GitHub Pages to publish the site.
