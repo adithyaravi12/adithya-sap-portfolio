@@ -88,7 +88,7 @@ The endpoint should return an array in this format:
 
 Only publish feedback for which the colleague has explicitly provided consent. Replace the current example testimonials and placeholder copy before using the portfolio publicly.
 
-### Portrait and rÃ©sumÃ©
+### Portrait and resume
 
 Replace the files in `assets/` while keeping the existing filenames, or update their paths in `index.html`.
 
