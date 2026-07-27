@@ -322,20 +322,22 @@ h1 {
 }
 
 .about-section {
+  align-itmes: start;
   display: grid;
   gap: clamp(2.5rem, 5vw, 5rem);
-  grid-template-columns: minmax(250px, 0.55fr) minmax(0, 1.45fr);
+  grid-template-columns: minmax(320px, 0.7fr) minmax(0, 1.3fr);
   margin: 0 auto;
   max-width: 1440px;
   padding: clamp(5rem, 8vw, 8rem) 4.5vw;
 }
 
 .about-portrait {
-  align-self: stretch;
+  align-self: start;
   background: var(--card);
   border: 1px solid var(--line);
   display: flex;
   flex-direction: column;
+  height: fit-content;
   margin: 0;
   min-width: 0;
 }
