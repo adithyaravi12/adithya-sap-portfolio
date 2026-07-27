@@ -1,4 +1,4 @@
-# Adithya Ravi â€” SAP Portfolio
+# Adithya Ravi — SAP Portfolio
 
 A responsive professional portfolio highlighting my experience as an SAP Business Systems Analyst across SAP SD, Order-to-Cash, pricing, billing, SAP GTS, and cross-functional delivery in the medical-device industry.
 
