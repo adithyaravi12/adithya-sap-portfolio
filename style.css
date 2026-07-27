@@ -120,7 +120,7 @@ nav a:focus-visible,
   grid-template-columns: minmax(0, 1.15fr) minmax(330px, 0.85fr);
   margin: 0 auto;
   max-width: 1440px;
-  min-height: calc(100vh - 88px);
+  min-height: auto;
   padding: clamp(5.5rem, 9vw, 8.5rem) 4.5vw 6.5rem;
 }
 
