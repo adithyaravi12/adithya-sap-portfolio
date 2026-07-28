@@ -349,7 +349,10 @@ function renderTestimonials(items, note = "") {
                 ${renderFeedbackBubbles(item)}
                 <figcaption>
                   <strong>${escapeHTML(item.name)}</strong>
-                  <span>${escapeHTML(item.role)}</span>
+                  <span>
+                    ${escapeHTML(item.role)}
+                    ${item.company ? ` · ${escapeHTML(item.company)}` : ""}
+                  </span>
                   <small>${escapeHTML(item.relationship)}</small>
                 </figcaption>
               </figure>
@@ -387,7 +390,10 @@ function renderAllTestimonials(items) {
           ${renderFeedbackBubbles(item)}
           <figcaption>
             <strong>${escapeHTML(item.name)}</strong>
-            <span>${escapeHTML(item.role)}</span>
+            <span>
+              ${escapeHTML(item.role)}
+              ${item.company ? ` · ${escapeHTML(item.company)}` : ""}
+            </span>
             <small>${escapeHTML(item.relationship)}</small>
           </figcaption>
         </figure>
