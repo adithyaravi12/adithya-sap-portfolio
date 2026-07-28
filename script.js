@@ -363,8 +363,6 @@ function renderTestimonials(items, note = "") {
               <a
                 class="view-feedback"
                 href="./feedback.html"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 View all feedback <span aria-hidden="true">↗</span>
               </a>
