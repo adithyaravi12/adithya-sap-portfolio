@@ -116,6 +116,7 @@ const testimonials = [
     name: "Josh Boyle",
 
     role: "Service Admin",
+    company: "LivaNova",
 
     relationship:
       "Worked together on SAP ECC Queries and Reporting extracts",
