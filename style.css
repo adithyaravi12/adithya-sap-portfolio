@@ -912,6 +912,57 @@ h2 {
   margin: 0.65rem 0 0;
 }
 
+.feedback-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+}
+
+.feedback-bubble {
+  align-items: center;
+  background: rgba(142, 27, 46, 0.08);
+  border: 1px solid rgba(142, 27, 46, 0.2);
+  border-radius: 999px;
+  color: var(--text);
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
+  gap: 0.35rem;
+  line-height: 1.2;
+  padding: 0.5rem 0.75rem;
+}
+
+.feedback-bubble small {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.feedback-bubble--strength {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.testimonial-card figcaption {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .feedback-bubbles {
+    gap: 0.45rem;
+  }
+
+  .feedback-bubble {
+    font-size: 0.67rem;
+    padding: 0.45rem 0.65rem;
+  }
+}
+
 .testimonial-grid {
   display: grid;
   gap: 1rem;
