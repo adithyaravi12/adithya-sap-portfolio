@@ -943,9 +943,9 @@ h2 {
 }
 
 .feedback-bubble--strength {
-  background: rgba(142, 27, 46, 0.08);
-  border: 1px solid rgba(142, 27, 46, 0.25);
-  color: var(--ink);
+  background: #f3dfb3;
+  border-color: #d5ae5e;
+  color: #4a3210;
 }
 
 .testimonial-card figcaption {
