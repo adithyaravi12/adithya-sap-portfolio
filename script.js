@@ -111,31 +111,29 @@ const certifications = [
 const testimonials = [
   {
     quote:
-      "Lorem ipsum dolor sit amet. Ea enim esse aut similique odio ut corporis doloremque. Ut unde optio et ipsa tempore et error porro eum iure dolor ex eveniet porro id officia sint et voluptatem internos. ",
-    name: "Manager name · Example",
-    role: "Manager · Company",
-    relationship: "Managed Adithya during SAP production support",
-  },
-  {
-    quote:
-      "Lorem ipsum dolor sit amet. Ea enim esse aut similique odio ut corporis doloremque. Ut unde optio et ipsa tempore et error porro eum iure dolor ex eveniet porro id officia sint et voluptatem internos. ",
-    name: "Business colleague name · Example",
-    role: "Business Process Owner · Company",
-    relationship: "Collaborated on SAP pricing and order-to-cash enhancements",
-  },
-  {
-    quote:
-      "Lorem ipsum dolor sit amet. Ea enim esse aut similique odio ut corporis doloremque. Ut unde optio et ipsa tempore et error porro eum iure dolor ex eveniet porro id officia sint et voluptatem internos. ",
-    name: "Technical colleague name · Example",
-    role: "SAP ABAP Developer · Company",
-    relationship: "Collaborated on custom reports and SAP enhancements",
-  },
-  {
-    quote:
-      "Lorem ipsum dolor sit amet. Ea enim esse aut similique odio ut corporis doloremque. Ut unde optio et ipsa tempore et error porro eum iure dolor ex eveniet porro id officia sint et voluptatem internos. ",
-    name: "Project colleague name · Example",
-    role: "Project Manager · Company",
-    relationship: "Collaborated on an SAP platform upgrade",
+      "Adithya is a trusted advisor for SAP ECC-related questions and has been a wonderful colleague and friend to work with.",
+
+    name: "Josh Boyle",
+
+    role: "Service Admin",
+
+    relationship:
+      "Worked together on SAP ECC Queries and Reporting extracts",
+
+    strengths: [
+      "Problem solving",
+      "Communication skills",
+      "Collaboration",
+      "Technical Proficiency"
+    ],
+
+    recommendation: "5",
+
+    responsiveness: "Excellent",
+
+    reliability: "Excellent",
+
+    communication: "Excellent",
   },
 ];
 
