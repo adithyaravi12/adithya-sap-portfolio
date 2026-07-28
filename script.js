@@ -270,6 +270,67 @@ function renderExpertise() {
     )
     .join("");
 } */
+function renderFeedbackBubbles(item) {
+  const bubbles = [];
+
+  const strengths = Array.isArray(item.strengths)
+    ? item.strengths
+    : String(item.strengths || "")
+        .split(/[,;]\s*/)
+        .filter(Boolean);
+
+  strengths.forEach((strength) => {
+    bubbles.push(`
+      <span class="feedback-bubble feedback-bubble--strength">
+        ${escapeHTML(strength)}
+      </span>
+    `);
+  });
+
+  if (item.recommendation) {
+    bubbles.push(`
+      <span class="feedback-bubble">
+        <small>Recommendation</small>
+        ${escapeHTML(item.recommendation)}/5
+      </span>
+    `);
+  }
+
+  if (item.responsiveness) {
+    bubbles.push(`
+      <span class="feedback-bubble">
+        <small>Responsiveness</small>
+        ${escapeHTML(item.responsiveness)}
+      </span>
+    `);
+  }
+
+  if (item.reliability) {
+    bubbles.push(`
+      <span class="feedback-bubble">
+        <small>Reliability</small>
+        ${escapeHTML(item.reliability)}
+      </span>
+    `);
+  }
+
+  if (item.communication) {
+    bubbles.push(`
+      <span class="feedback-bubble">
+        <small>Communication</small>
+        ${escapeHTML(item.communication)}
+      </span>
+    `);
+  }
+
+  if (!bubbles.length) return "";
+
+  return `
+    <div class="feedback-bubbles" aria-label="Feedback ratings">
+      ${bubbles.join("")}
+    </div>
+  `;
+}
 
 function renderTestimonials(items, note = "") {
   if (!feedbackContent || !items.length) return;
@@ -284,6 +345,7 @@ function renderTestimonials(items, note = "") {
             (item) => `
               <figure class="testimonial-card">
                 <blockquote>“${escapeHTML(item.quote)}”</blockquote>
+                ${renderFeedbackBubbles(item)}
                 <figcaption>
                   <strong>${escapeHTML(item.name)}</strong>
                   <span>${escapeHTML(item.role)}</span>
@@ -323,6 +385,7 @@ function renderAllTestimonials(items) {
       (item) => `
         <figure class="testimonial-card">
           <blockquote>“${escapeHTML(item.quote)}”</blockquote>
+          ${renderFeedbackBubbles(item)}
           <figcaption>
             <strong>${escapeHTML(item.name)}</strong>
             <span>${escapeHTML(item.role)}</span>
