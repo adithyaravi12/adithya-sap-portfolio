@@ -136,6 +136,34 @@ const testimonials = [
 
     communication: "Excellent",
   },
+  {
+    quote:
+      "He is excellent team player and fast learner.",
+
+    name: "Sridhar Kuruganti",
+
+    role: "SAP Consultant ",
+    company: "LivaNova",
+
+    relationship:
+      "Collaborating with Adithya in resolving multiple issues in SAP Pricing, building custom solutions, and addressing business process gaps designing and developing SAP Enhancements framework.",
+
+    strengths: [
+      "Problem solving",
+      "Communication skills",
+      "Team collaboration",
+      "Technical Proficiency",
+      "Project management"
+    ],
+
+    recommendation: "5",
+
+    responsiveness: "Excellent",
+
+    reliability: "Excellent",
+
+    communication: "Excellent",
+  },
 ];
 
 /*
