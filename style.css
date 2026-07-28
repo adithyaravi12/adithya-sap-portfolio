@@ -322,7 +322,7 @@ h1 {
 }
 
 .about-section {
-  align-itmes: start;
+  align-items: start;
   display: grid;
   gap: clamp(2.5rem, 5vw, 5rem);
   grid-template-columns: minmax(320px, 0.7fr) minmax(0, 1.3fr);
@@ -924,7 +924,7 @@ h2 {
   background: rgba(142, 27, 46, 0.08);
   border: 1px solid rgba(142, 27, 46, 0.2);
   border-radius: 999px;
-  color: var(--text);
+  color: var(--ink);
   display: inline-flex;
   font-size: 0.72rem;
   font-weight: 700;
@@ -945,7 +945,7 @@ h2 {
 .feedback-bubble--strength {
   background: rgba(142, 27, 46, 0.08);
   border: 1px solid rgba(142, 27, 46, 0.25);
-  color: var(--text);
+  color: var(--ink);
 }
 
 .testimonial-card figcaption {
