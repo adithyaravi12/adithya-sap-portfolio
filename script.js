@@ -164,6 +164,62 @@ const testimonials = [
 
     communication: "Excellent",
   },
+  {
+    quote:
+      "Adithya is a pleasure to work with, he is incredibly knowledgeable, patient and understanding.",
+
+    name: "Jessie Estrada",
+
+    role: "Commercial Operations Supervisor ",
+    company: "LivaNova",
+
+    relationship:
+      "Worked with Adithya on SAP functional requirements, on technical specifications , enhancements, testing and issue resolution",
+
+    strengths: [
+      "Problem solving",
+      "Communication skills",
+      "Team collaboration",
+      "Technical Proficiency",
+      "Project management"
+    ],
+
+    recommendation: "5",
+
+    responsiveness: "Excellent",
+
+    reliability: "Excellent",
+
+    communication: "Excellent",
+  },
+  {
+    quote:
+      "Adithya is a knowledgeable and dependable SAP Functional Consultant. He clearly communicates business requirements, prepares detailed functional specifications, and works closely with the technical team during development, testing, and issue resolution. He is collaborative, responsive, and effective",
+
+    name: "Pratik Kasralikar",
+
+    role: "SAP Hana Developer",
+    company: "LivaNova",
+
+    relationship:
+      "Worked with Adithya on SAP functional requirements, on technical specifications , enhancements, testing and issue resolution",
+
+    strengths: [
+      "Problem solving",
+      "Communication skills",
+      "Team collaboration",
+      "Technical Proficiency",
+      "Project management"
+    ],
+
+    recommendation: "5",
+
+    responsiveness: "Excellent",
+
+    reliability: "Excellent",
+
+    communication: "Excellent",
+  },
 ];
 
 /*
