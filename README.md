@@ -40,6 +40,7 @@ adithya-sap-portfolio/
 └── assets/
     ├── adithya-ravi-portrait.jpg
     └── Adithya-Ravi-Resume.pdf
+    └── SAP_2011_Logo.svg
 ```
 
 ## Customize the portfolio
