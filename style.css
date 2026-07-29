@@ -794,6 +794,7 @@ h2 {
   padding: 1.35rem 1.5rem;
 }
 
+/* 
 .certification-icon {
   align-items: center;
   background: #8e1b2e;
@@ -806,6 +807,32 @@ h2 {
   height: 46px;
   justify-content: center;
   width: 46px;
+}
+*/
+
+.certification-logo {
+  align-items: center;
+  display: flex;
+  flex: 0 0 72px;
+  justify-content: center;
+}
+
+.certification-logo img {
+  display: block;
+  height: auto;
+  max-width: 72px;
+  object-fit: contain;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .certification-logo {
+    flex-basis: 58px;
+  }
+
+  .certification-logo img {
+    max-width: 58px;
+  }
 }
 
 .certification-details {
