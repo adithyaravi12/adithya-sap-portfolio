@@ -1096,75 +1096,64 @@ h2 {
 }
 
 .all-feedback-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding: clamp(3rem, 6vw, 6rem) 0;
-}
-
-.all-feedback-grid .testimonial-card {
-  display: flex;
-  flex-direction: column;
-  min-height: 390px;
-}
-
-.all-feedback-grid .testimonial-card blockquote {
-  flex: 1;
-}
-
-/* Adaptive layout for feedback.html */
-#all-feedback-grid {
   align-items: start;
   display: grid;
   gap: 1rem;
   grid-auto-flow: dense;
+  grid-auto-rows: 8px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  padding: clamp(3rem, 6vw, 6rem) 0;
 }
 
-/* Short feedback */
-#all-feedback-grid .feedback-card--small {
-  grid-column: span 3;
-}
-
-/* Medium feedback */
-#all-feedback-grid .feedback-card--medium {
-  grid-column: span 4;
-}
-
-/* Long feedback */
-#all-feedback-grid .feedback-card--large {
-  grid-column: span 6;
-}
-
-#all-feedback-grid .testimonial-card {
+.all-feedback-grid .testimonial-card {
   align-self: start;
+  display: block;
   height: auto;
   min-height: 0;
   width: auto;
 }
 
-#all-feedback-grid .testimonial-card blockquote {
+/* Short review */
+.all-feedback-grid .feedback-card--small {
+  grid-column: span 3;
+}
+
+/* Medium review */
+.all-feedback-grid .feedback-card--medium {
+  grid-column: span 4;
+}
+
+/* Long review */
+.all-feedback-grid .feedback-card--large {
+  grid-column: span 6;
+}
+
+.all-feedback-grid .testimonial-card blockquote {
+  flex: none;
   overflow-wrap: anywhere;
 }
 
-/* Tablet */
-@media (max-width: 1000px) {
-  #all-feedback-grid .feedback-card--small {
-    grid-column: span 4;
-  }
+.all-feedback-grid .testimonial-card figcaption {
+  margin-top: 1.5rem;
+}
 
-  #all-feedback-grid .feedback-card--medium,
-  #all-feedback-grid .feedback-card--large {
+@media (max-width: 1000px) {
+  .all-feedback-grid .feedback-card--small,
+  .all-feedback-grid .feedback-card--medium,
+  .all-feedback-grid .feedback-card--large {
     grid-column: span 6;
   }
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  #all-feedback-grid .feedback-card--small,
-  #all-feedback-grid .feedback-card--medium,
-  #all-feedback-grid .feedback-card--large {
-    grid-column: 1 / -1;
+@media (max-width: 640px) {
+  .all-feedback-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .all-feedback-grid .feedback-card--small,
+  .all-feedback-grid .feedback-card--medium,
+  .all-feedback-grid .feedback-card--large {
+    grid-column: 1;
   }
 }
 
