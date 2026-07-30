@@ -495,13 +495,13 @@ function renderAllTestimonials(items) {
 
   allFeedbackGrid.innerHTML = items
     .map((item) => {
-      const textLength = String(item.quote || "").length;
+      const textLength = String(item.quote || "").trim().length;
 
       let cardSize = "feedback-card--small";
 
-      if (textLength > 300) {
+      if (textLength >= 350) {
         cardSize = "feedback-card--large";
-      } else if (textLength > 150) {
+      } else if (textLength >= 180) {
         cardSize = "feedback-card--medium";
       }
 
@@ -532,9 +532,10 @@ function renderAllTestimonials(items) {
 function resizeFeedbackCards() {
   if (!allFeedbackGrid) return;
 
-  const styles = window.getComputedStyle(allFeedbackGrid);
-  const rowHeight = parseFloat(styles.getPropertyValue("grid-auto-rows"));
-  const rowGap = parseFloat(styles.getPropertyValue("row-gap"));
+  const gridStyles = window.getComputedStyle(allFeedbackGrid);
+  const rowHeight =
+    parseFloat(gridStyles.getPropertyValue("grid-auto-rows")) || 8;
+  const rowGap = parseFloat(gridStyles.getPropertyValue("row-gap")) || 16;
 
   allFeedbackGrid
     .querySelectorAll(".testimonial-card")
@@ -550,8 +551,13 @@ function resizeFeedbackCards() {
     });
 }
 
-window.addEventListener("load", resizeFeedbackCards);
-window.addEventListener("resize", resizeFeedbackCards);
+window.addEventListener("load", () => {
+  requestAnimationFrame(resizeFeedbackCards);
+});
+
+window.addEventListener("resize", () => {
+  requestAnimationFrame(resizeFeedbackCards);
+});
 
 function displayTestimonials(items, note = "") {
   renderTestimonials(items, note);
