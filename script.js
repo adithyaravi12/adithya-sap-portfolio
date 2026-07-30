@@ -494,22 +494,36 @@ function renderAllTestimonials(items) {
   if (!allFeedbackGrid) return;
 
   allFeedbackGrid.innerHTML = items
-    .map(
-      (item) => `
-        <figure class="testimonial-card">
+    .map((item) => {
+      const textLength = String(item.quote || "").length;
+
+      let cardSize = "feedback-card--small";
+
+      if (textLength > 300) {
+        cardSize = "feedback-card--large";
+      } else if (textLength > 140) {
+        cardSize = "feedback-card--medium";
+      }
+
+      return `
+        <figure class="testimonial-card ${cardSize}">
           <blockquote>“${escapeHTML(item.quote)}”</blockquote>
+
           ${renderFeedbackBubbles(item)}
+
           <figcaption>
             <strong>${escapeHTML(item.name)}</strong>
+
             <span>
               ${escapeHTML(item.role)}
               ${item.company ? ` · ${escapeHTML(item.company)}` : ""}
             </span>
+
             <small>${escapeHTML(item.relationship)}</small>
           </figcaption>
         </figure>
-      `,
-    )
+      `;
+    })
     .join("");
 }
 
