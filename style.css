@@ -1095,6 +1095,7 @@ h2 {
   max-width: 520px;
 }
 
+/* Masonry feedback layout */
 .all-feedback-grid {
   align-items: start;
   display: grid;
@@ -1105,31 +1106,35 @@ h2 {
   padding: clamp(3rem, 6vw, 6rem) 0;
 }
 
+/* Prevent inherited fixed card heights */
 .all-feedback-grid .testimonial-card {
   align-self: start;
+  box-sizing: border-box;
   display: block;
   height: auto;
   min-height: 0;
   width: auto;
 }
 
-/* Short review */
+/* Short review: one quarter */
 .all-feedback-grid .feedback-card--small {
   grid-column: span 3;
 }
 
-/* Medium review */
+/* Medium review: one third */
 .all-feedback-grid .feedback-card--medium {
   grid-column: span 4;
 }
 
-/* Long review */
+/* Long review: one half */
 .all-feedback-grid .feedback-card--large {
   grid-column: span 6;
 }
 
 .all-feedback-grid .testimonial-card blockquote {
   flex: none;
+  height: auto;
+  min-height: 0;
   overflow-wrap: anywhere;
 }
 
@@ -1137,23 +1142,26 @@ h2 {
   margin-top: 1.5rem;
 }
 
+/* Tablet */
 @media (max-width: 1000px) {
   .all-feedback-grid .feedback-card--small,
-  .all-feedback-grid .feedback-card--medium,
-  .all-feedback-grid .feedback-card--large {
+  .all-feedback-grid .feedback-card--medium {
     grid-column: span 6;
+  }
+
+  .all-feedback-grid .feedback-card--large {
+    grid-column: 1 / -1;
   }
 }
 
+/* Mobile */
 @media (max-width: 640px) {
   .all-feedback-grid {
-    grid-template-columns: 1fr;
+    display: block;
   }
 
-  .all-feedback-grid .feedback-card--small,
-  .all-feedback-grid .feedback-card--medium,
-  .all-feedback-grid .feedback-card--large {
-    grid-column: 1;
+  .all-feedback-grid .testimonial-card {
+    margin-bottom: 1rem;
   }
 }
 
