@@ -501,7 +501,7 @@ function renderAllTestimonials(items) {
 
       if (textLength > 300) {
         cardSize = "feedback-card--large";
-      } else if (textLength > 140) {
+      } else if (textLength > 150) {
         cardSize = "feedback-card--medium";
       }
 
@@ -525,7 +525,33 @@ function renderAllTestimonials(items) {
       `;
     })
     .join("");
+
+  requestAnimationFrame(resizeFeedbackCards);
 }
+
+function resizeFeedbackCards() {
+  if (!allFeedbackGrid) return;
+
+  const styles = window.getComputedStyle(allFeedbackGrid);
+  const rowHeight = parseFloat(styles.getPropertyValue("grid-auto-rows"));
+  const rowGap = parseFloat(styles.getPropertyValue("row-gap"));
+
+  allFeedbackGrid
+    .querySelectorAll(".testimonial-card")
+    .forEach((card) => {
+      card.style.gridRowEnd = "auto";
+
+      const cardHeight = card.getBoundingClientRect().height;
+      const rowSpan = Math.ceil(
+        (cardHeight + rowGap) / (rowHeight + rowGap),
+      );
+
+      card.style.gridRowEnd = `span ${rowSpan}`;
+    });
+}
+
+window.addEventListener("load", resizeFeedbackCards);
+window.addEventListener("resize", resizeFeedbackCards);
 
 function displayTestimonials(items, note = "") {
   renderTestimonials(items, note);
