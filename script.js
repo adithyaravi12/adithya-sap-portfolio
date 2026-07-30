@@ -111,6 +111,33 @@ const certifications = [
 const testimonials = [
   {
     quote:
+      "As an ERP associate in LivaNova, Adithya has demonstrated a strong foundation in SAP systems and business processes especially in the Order to Cash area.  I have had the pleasure of working with him on several projects in LivaNova. He quickly grasps technical concepts and is eager to learn and apply new skills. His analytical mindset enables him to identify issues efficiently and contribute practical solutions that support business requirements.",
+
+    name: "Prakash Ramachandran",
+
+    role: "ERP Senior Specialist",
+    company: "LivaNova",
+
+    relationship:
+      "Adithya worked with me on OTC enhancements and other proejcts",
+
+    strengths: [
+      "Problem solving",
+      "Communication skills",
+      "Team Collaboration",
+      "Technical Proficiency"
+    ],
+
+    recommendation: "5",
+
+    responsiveness: "Excellent",
+
+    reliability: "Satisfactory",
+
+    communication: "Satisfactory",
+  },
+  {
+    quote:
       "Adithya is a trusted advisor for SAP ECC-related questions and has been a wonderful colleague and friend to work with.",
 
     name: "Josh Boyle",
