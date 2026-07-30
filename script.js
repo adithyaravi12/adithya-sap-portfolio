@@ -119,7 +119,7 @@ const testimonials = [
     company: "LivaNova",
 
     relationship:
-      "Adithya worked with me on OTC enhancements and other proejcts",
+      "Adithya worked with me on OTC enhancements and other projects",
 
     strengths: [
       "Problem solving",
