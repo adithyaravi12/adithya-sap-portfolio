@@ -552,30 +552,30 @@ function renderAllTestimonials(items) {
     })
     .join("");
 
-  requestAnimationFrame(resizeFeedbackCards);
+  // requestAnimationFrame(resizeFeedbackCards);
 }
 
-function resizeFeedbackCards() {
-  if (!allFeedbackGrid) return;
+// function resizeFeedbackCards() {
+//   if (!allFeedbackGrid) return;
 
-  const gridStyles = window.getComputedStyle(allFeedbackGrid);
-  const rowHeight =
-    parseFloat(gridStyles.getPropertyValue("grid-auto-rows")) || 8;
-  const rowGap = parseFloat(gridStyles.getPropertyValue("row-gap")) || 16;
+//   const gridStyles = window.getComputedStyle(allFeedbackGrid);
+//   const rowHeight =
+//     parseFloat(gridStyles.getPropertyValue("grid-auto-rows")) || 8;
+//   const rowGap = parseFloat(gridStyles.getPropertyValue("row-gap")) || 16;
 
-  allFeedbackGrid
-    .querySelectorAll(".testimonial-card")
-    .forEach((card) => {
-      card.style.gridRowEnd = "auto";
+//   allFeedbackGrid
+//     .querySelectorAll(".testimonial-card")
+//     .forEach((card) => {
+//       card.style.gridRowEnd = "auto";
 
-      const cardHeight = card.getBoundingClientRect().height;
-      const rowSpan = Math.ceil(
-        (cardHeight + rowGap) / (rowHeight + rowGap),
-      );
+//       const cardHeight = card.getBoundingClientRect().height;
+//       const rowSpan = Math.ceil(
+//         (cardHeight + rowGap) / (rowHeight + rowGap),
+//       );
 
-      card.style.gridRowEnd = `span ${rowSpan}`;
-    });
-}
+//       card.style.gridRowEnd = `span ${rowSpan}`;
+//     });
+// }
 
 window.addEventListener("load", () => {
   requestAnimationFrame(resizeFeedbackCards);
