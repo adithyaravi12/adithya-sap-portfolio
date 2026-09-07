@@ -1096,7 +1096,7 @@ h2 {
 }
 
 /* Masonry feedback layout */
-.all-feedback-grid {
+/* .all-feedback-grid {
   align-items: start;
   display: grid;
   gap: 1rem;
@@ -1104,64 +1104,96 @@ h2 {
   grid-auto-rows: 8px;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   padding: clamp(3rem, 6vw, 6rem) 0;
-}
+} */
 
 /* Prevent inherited fixed card heights */
-.all-feedback-grid .testimonial-card {
+/* .all-feedback-grid .testimonial-card {
   align-self: start;
   box-sizing: border-box;
   display: block;
   height: auto;
   min-height: 0;
   width: auto;
-}
+} */
 
 /* Short review: one quarter */
-.all-feedback-grid .feedback-card--small {
+/* .all-feedback-grid .feedback-card--small {
   grid-column: span 3;
-}
+} */
 
 /* Medium review: one third */
-.all-feedback-grid .feedback-card--medium {
+/* .all-feedback-grid .feedback-card--medium {
   grid-column: span 4;
-}
+} */
 
 /* Long review: one half */
-.all-feedback-grid .feedback-card--large {
+/* .all-feedback-grid .feedback-card--large {
   grid-column: span 6;
-}
+} */
 
-.all-feedback-grid .testimonial-card blockquote {
+/* .all-feedback-grid .testimonial-card blockquote {
   flex: none;
   height: auto;
   min-height: 0;
   overflow-wrap: anywhere;
-}
+} */
 
-.all-feedback-grid .testimonial-card figcaption {
+/* .all-feedback-grid .testimonial-card figcaption {
   margin-top: 1.5rem;
-}
+} */
 
 /* Tablet */
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   .all-feedback-grid .feedback-card--small,
   .all-feedback-grid .feedback-card--medium {
     grid-column: span 6;
-  }
+  } */
 
-  .all-feedback-grid .feedback-card--large {
+  /* .all-feedback-grid .feedback-card--large {
     grid-column: 1 / -1;
   }
-}
+} */
 
 /* Mobile */
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .all-feedback-grid {
     display: block;
   }
 
   .all-feedback-grid .testimonial-card {
     margin-bottom: 1rem;
+  }
+} */
+
+.all-feedback-grid {
+  column-count: 3;
+  column-gap: 1rem;
+  padding: clamp(3rem, 6vw, 6rem) 0;
+}
+
+.all-feedback-grid .testimonial-card {
+  break-inside: avoid;
+  display: inline-block;
+  height: auto;
+  margin: 0 0 1rem;
+  min-height: 0;
+  vertical-align: top;
+  width: 100%;
+}
+
+.all-feedback-grid .testimonial-card blockquote {
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1000px) {
+  .all-feedback-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .all-feedback-grid {
+    column-count: 1;
   }
 }
 
