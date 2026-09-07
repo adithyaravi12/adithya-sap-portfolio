@@ -111,6 +111,32 @@ const certifications = [
 const testimonials = [
   {
     quote:
+      "Adithya has been very valuable partner of the SAP team at LivaNova, have successfully delivered all assignments",
+
+    name: "Nimesh Prajapati",
+
+    role: "ERP Manager",
+    company: "LivaNova",
+
+    relationship:
+      "Cross functional Partner",
+
+    strengths: [
+      "Problem solving",
+      "Team Collaboration",
+      "Technical Proficiency"
+    ],
+
+    recommendation: "5",
+
+    responsiveness: "Excellent",
+
+    reliability: "Excellent",
+
+    communication: "Excellent",
+  },
+  {
+    quote:
       "As an ERP associate in LivaNova, Adithya has demonstrated a strong foundation in SAP systems and business processes especially in the Order to Cash area.  I have had the pleasure of working with him on several projects in LivaNova. He quickly grasps technical concepts and is eager to learn and apply new skills. His analytical mindset enables him to identify issues efficiently and contribute practical solutions that support business requirements.",
 
     name: "Prakash Ramachandran",
