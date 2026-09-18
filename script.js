@@ -111,6 +111,34 @@ const certifications = [
 const testimonials = [
   {
     quote:
+      "Adithya is a strong and dependable collaborator throughout our work together. He demonstrated good knowledge of SAP processes and was effective in understanding requirements, working through issues, and contributing to the successful delivery of enhancements. Our collaboration involved coordinating on technical and functional requirements, troubleshooting, and ensuring solutions aligned with business needs. I had the opportunity to collaborate closely with Adithya on several initiatives related to SAP OTC business processes. Throughout our work together, Adithya demonstrated strong SAP expertise, a collaborative approach, and a consistent focus on achieving successful outcomes.  One of the highlights of our collaboration was his role in supporting the SAP GTS technical upgrade project, where he stepped up and took on the responsibilities of a Project Manager. He effectively coordinated across teams, managed project activities, and helped drive the initiative forward while maintaining strong communication with the stakeholders.  I greatly appreciated Adithya’s willingness to take ownership, his ability to collaborate across functional and technical teams, and his commitment to delivering results. Working with him was a positive experience, and his contributions were valuable to the success of our initiatives. Overall, my experience working with him was very positive, and I would be happy to collaborate with him again on future SAP initiatives.",
+
+    name: "Aman Chahal",
+
+    role: "ERP Senior Manager",
+    company: "LivaNova",
+
+    relationship:
+      "Managed and supported Adithya across SAP OTC initiatives, SAP GTS upgrade activities, and cross-functional projects, fostering collaboration, ownership, and successful delivery of business objectives.",
+
+    strengths: [
+      "Problem solving",
+      "Team Collaboration",
+      "Technical Proficiency",
+      "Communication Skills",
+      "Project Management"
+    ],
+
+    recommendation: "5",
+
+    responsiveness: "Excellent",
+
+    reliability: "Excellent",
+
+    communication: "Satisfactory",
+  },
+  {
+    quote:
       "Adithya has been very valuable partner of the SAP team at LivaNova, have successfully delivered all assignments",
 
     name: "Nimesh Prajapati",
